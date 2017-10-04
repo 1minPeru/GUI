@@ -435,6 +435,8 @@ public class FoneOrder implements ActionListener {
 	 			
 	 		try
 	 		{
+				//THIS PART WHERE IT TRIES TO PRINT STUFF, and when i use the ctrl+s command which is supposed
+				//save/print it, it does nothing.
 	 			JFileChooser oFile = new JFileChooser();
 				//soFile.showSaveDialog(null);
 				BufferedWriter orders = new BufferedWriter(new FileWriter(oFile.getSelectedFile().getAbsoluteFile()));
