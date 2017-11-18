@@ -1,8 +1,8 @@
 # GUI
 A small GUI that takes an order for a smartphone and prints receipt as a file.
 
-FoodOrder and the FoneOrder are essentially the same, except the method in which they are printing.
+Just download all of the files into a java project in eclipse or your favorite IDE.
 
-FoodOrder (named incorrectly) edits the PhoneOrder.txt file.
+Run FoneOrder.java and after selecting your choices and inputting your data into the textboxes, hitting Ctrl+S or selecting save in the menu will alter the PhoneOrder.txt file to be the reciept of your order.
 
-I'm trying to make the FoneOrder.java print the reciept as a .txt file to a folder of your choice.
+This project was a small project I worked on during Senior Year of highschool.
