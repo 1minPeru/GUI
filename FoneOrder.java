@@ -1,8 +1,6 @@
 
 import java.awt.*;
 import java.awt.event.*;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
 
@@ -35,7 +33,7 @@ public class FoneOrder implements ActionListener {
 	
 	
 	public static void main(String[] args) {
-		Foods gui = new Foods();
+		FoneOrder gui = new FoneOrder();
 		gui.start();
 	}
 	
@@ -435,21 +433,16 @@ public class FoneOrder implements ActionListener {
 	 			
 	 		try
 	 		{
-				//THIS PART WHERE IT TRIES TO PRINT STUFF, and when i use the ctrl+s command which is supposed
-				//save/print it, it does nothing.
-	 			JFileChooser oFile = new JFileChooser();
-				//soFile.showSaveDialog(null);
-				BufferedWriter orders = new BufferedWriter(new FileWriter(oFile.getSelectedFile().getAbsoluteFile()));
-	 			//PrintStream oFile = new PrintStream("PhoneOrder.txt");
-	 			orders.write(order);
-	 			orders.close();
+	 			PrintStream oFile = new PrintStream("PhoneOrder.txt");
+	 			oFile.print(order);
+	 			oFile.close();
 	 		}
 	 		catch(IOException ioe)
 	 		{
-	 			ioe.printStackTrace();
 	 			System.out.println("\n *~*~*~* I/O ERROR *~*~*~* \n"+ ioe);
 	 		}
 		}
 	}
 }
+
 
